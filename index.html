@@ -1,28 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jane Mango Angar</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+      color: #222;
+      background-color: #ffffff;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    header {
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 6px;
+      color: #003262;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    nav {
+      margin-top: 20px;
+    }
+
+    nav a {
+      margin-right: 18px;
+      text-decoration: none;
+      color: #003262;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 34px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: #003262;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 6px;
+    }
+
+    a {
+      color: #003262;
+    }
+
+    footer {
+      border-top: 1px solid #ddd;
+      margin-top: 40px;
+      padding-top: 20px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        display: block;
+        margin-bottom: 8px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Jane Mango Angar</h1>
+  <div class="container">
+    <header>
+      <h1>Jane Mango Angar</h1>
+      <p class="subtitle">
+        PhD Candidate in Political Science, University of California, Berkeley
+      </p>
 
-  <p>
-    PhD Candidate in Political Science at the University of California, Berkeley
-  </p>
+      <nav>
+        <a href="#research">Research</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-  <h2>Research</h2>
+    <section id="about">
+      <p>
+        I am a PhD candidate in Political Science at the University of California,
+        Berkeley. I study disability politics, social movements, and human rights activism in African countries.
+        My research examines how disability rights movements emerge, how advocacy organizations
+         make claims on the state, and how official statistics shape political recognition.
+      </p>
+    </section>
 
-  <p>
-    I study disability politics, state recognition,
-    and census inclusion in African countries.
-  </p>
+    <section id="research">
+      <h2>Research</h2>
+      <p>
+        My dissertation examines the emergence and effectiveness of disability rights movements
+        in Africa, with a focus on how disabled persons organizations have shaped state recognition
+        through national censuses, rights legislation, and social protection systems.
+      </p>
 
-  <h2>Contact</h2>
+      <p>
+        My broader research interests include African politics, disability politics,
+        political representation, state legibility, social movements, and comparative
+        politics.
+      </p>
+    </section>
 
-  <p>
-    Email: angarjane1 [at] berkeley [dot] edu
-  </p>
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <p>
+        I have taught and supported courses in quantitative methods, comparative
+        politics, African politics, and research design.
+      </p>
+    </section>
 
+    <section id="cv">
+      <h2>CV</h2>
+      <p>
+        My CV will be available here soon.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email: angarjane1 [at] berkeley [dot] edu
+      </p>
+    </section>
+
+    <footer>
+      <p>© Jane Mango Angar</p>
+    </footer>
+  </div>
 </body>
 </html>
