@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jane Mango Angar</title>
+
+  <meta
+    name="description"
+    content="Jane Mango Angar is a PhD candidate in Political Science at the University of California, Berkeley."
+  >
+
+  <style>
+    :root {
+      --sidebar-width: 345px;
+      --navy: #12324a;
+      --navy-light: #1d4968;
+      --gold: #d5a847;
+      --text: #2c2c2c;
+      --muted: #687078;
+      --line: #e2e5e7;
+      --background: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 35px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--navy-light);
+      text-underline-offset: 3px;
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--gold);
+    }
+
+    /* =========================
+       LEFT PROFILE COLUMN
+       ========================= */
+
+    .sidebar {
+      position: fixed;
+      inset: 0 auto 0 0;
+      width: var(--sidebar-width);
+      min-height: 100vh;
+      padding: 55px 40px 40px;
+      overflow-y: auto;
+      background: var(--navy);
+      color: white;
+      text-align: center;
+    }
+
+    .portrait {
+      width: 185px;
+      height: 185px;
+      margin: 0 auto 25px;
+      overflow: hidden;
+      border: 5px solid rgba(255, 255, 255, 0.88);
+      border-radius: 50%;
+      background: var(--navy-light);
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.2);
+    }
+
+    .portrait img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .portrait-placeholder {
+      display: none;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 3rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .sidebar h1 {
+      margin: 0 0 8px;
+      color: white;
+      font-size: 2rem;
+      font-weight: normal;
+      line-height: 1.15;
+    }
+
+    .position {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .institution {
+      display: block;
+      margin-top: 3px;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .sidebar nav {
+      margin: 35px 0 30px;
+      padding: 25px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .sidebar nav a {
+      display: block;
+      padding: 6px 0;
+      color: rgba(255, 255, 255, 0.82);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .sidebar nav a:hover,
+    .sidebar nav a:focus {
+      color: var(--gold);
+      transform: translateX(3px);
+    }
+
+    .sidebar-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 9px;
+    }
+
+    .sidebar-links a {
+      padding: 7px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 3px;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.76rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .sidebar-links a:hover,
+    .sidebar-links a:focus {
+      border-color: var(--gold);
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    /* =========================
+       MAIN CONTENT
+       ========================= */
+
+    main {
+      width: calc(100% - var(--sidebar-width));
+      margin-left: var(--sidebar-width);
+    }
+
+    .content {
+      width: min(850px, calc(100% - 90px));
+      margin: 0 auto;
+      padding: 65px 0 35px;
+    }
+
+    section {
+      padding: 20px 0 55px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:last-of-type {
+      border-bottom: 0;
+    }
+
+    h2 {
+      position: relative;
+      margin: 0 0 28px;
+      padding-bottom: 12px;
+      color: var(--navy);
+      font-size: 1.85rem;
+      font-weight: normal;
+      line-height: 1.25;
+    }
+
+    h2::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 48px;
+      height: 3px;
+      background: var(--gold);
+      content: "";
+    }
+
+    p {
+      margin: 0 0 1.25em;
+    }
+
+    section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-details {
+      padding: 22px 25px;
+      border-left: 3px solid var(--gold);
+      background: #f5f7f8;
+    }
+
+    footer {
+      padding: 25px 0 15px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    /* Keyboard accessibility */
+
+    a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    /* =========================
+       TABLET AND MOBILE
+       ========================= */
+
+    @media (max-width: 850px) {
+      .sidebar {
+        position: relative;
+        width: 100%;
+        min-height: auto;
+        padding: 38px 24px 30px;
+        overflow: visible;
+      }
+
+      .portrait {
+        width: 145px;
+        height: 145px;
+        margin-bottom: 20px;
+      }
+
+      .sidebar h1 {
+        font-size: 1.8rem;
+      }
+
+      .sidebar nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px 18px;
+        margin: 25px 0 22px;
+        padding: 18px 0;
+      }
+
+      .sidebar nav a {
+        display: inline-block;
+      }
+
+      .sidebar nav a:hover,
+      .sidebar nav a:focus {
+        transform: none;
+      }
+
+      main {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .content {
+        width: min(720px, calc(100% - 44px));
+        padding-top: 35px;
+      }
+
+      section {
+        padding: 15px 0 45px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      body {
+        font-size: 16px;
+        line-height: 1.68;
+      }
+
+      .sidebar {
+        padding: 32px 20px 25px;
+      }
+
+      .sidebar nav {
+        gap: 4px 12px;
+      }
+
+      .sidebar nav a {
+        font-size: 0.75rem;
+      }
+
+      .content {
+        width: calc(100% - 34px);
+      }
+
+      h2 {
+        font-size: 1.55rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <aside class="sidebar">
+
+    <!--
+      PHOTO PLACEHOLDER:
+      Upload your photograph to the repository and name it profile.jpg.
+      It will appear automatically.
+    -->
+    <div class="portrait">
+      <img
+        src="profile.jpg"
+        alt="Portrait of Jane Mango Angar"
+        onerror="
+          this.style.display='none';
+          this.nextElementSibling.style.display='flex';
+        "
+      >
+      <div class="portrait-placeholder" aria-hidden="true">JA</div>
+    </div>
+
+    <h1>Jane Mango Angar</h1>
+
+    <p class="position">
+      PhD Candidate in Political Science
+      <span class="institution">
+        University of California, Berkeley
+      </span>
+    </p>
+
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#advocacy">Advocacy</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="sidebar-links">
+
+      <!--
+        CV PLACEHOLDER:
+        Upload your CV and name it Jane_Angar_CV.pdf.
+      -->
+      <a href="Jane_Angar_CV.pdf" target="_blank" rel="noopener">
+        CV
+      </a>
+
+      <a href="mailto:angarjane1@berkeley.edu">
+        Email
+      </a>
+
+      <!-- Add Google Scholar, GitHub, or LinkedIn links here later. -->
+
+    </div>
+  </aside>
+
+  <main>
+    <div class="content">
+
+      <section id="about">
+        <h2>About</h2>
+
+        <p>
+          I am a PhD candidate in Political Science at the University of
+          California, Berkeley. I study disability politics, social movements,
+          and human rights activism in African countries. My research examines
+          how disability rights movements emerge, how advocacy organizations
+          make claims on the state, and how official statistics shape political
+          recognition.
+        </p>
+
+        <p>
+          My work examines how disability rights movements emerge, how disabled
+          persons organizations engage with the state, and how institutions such
+          as national censuses shape political visibility and citizenship.
+        </p>
+
+        <p>
+          More broadly, I am interested in comparative politics, African
+          politics, political identity, state formation, and questions of
+          inclusion and accessibility.
+        </p>
+      </section>
+
+      <section id="research">
+        <h2>Research</h2>
+
+        <p>
+          My dissertation examines the emergence and effectiveness of disability
+          rights movements in Africa, with a focus on how disabled persons
+          organizations have shaped state recognition through national censuses,
+          rights legislation, and social protection systems.
+        </p>
+
+        <p>
+          The project combines qualitative and quantitative methods, including
+          archival research, interviews, social network analysis, and
+          event-history analysis to examine variation in disability recognition
+          across African countries.
+        </p>
+
+        <p>
+          My broader research interests include disability politics, African
+          politics, political representation, state legibility, social movements,
+          and comparative political development.
+        </p>
+      </section>
+
+      <section id="teaching">
+        <h2>Teaching &amp; Methods Training</h2>
+
+        <p>
+          I have taught and supported courses in quantitative methods,
+          comparative politics, African politics, and research design at the
+          University of California, Berkeley.
+        </p>
+
+        <p>
+          I have also worked with Berkeley’s Data Science and Social Sciences
+          research community as both an instructor and consultant, supporting
+          students and researchers in areas such as data analysis, computational
+          social science, and research methodology.
+        </p>
+
+        <p>
+          I am committed to making computational social science and academic
+          research more accessible to diverse student communities.
+        </p>
+      </section>
+
+      <section id="advocacy">
+        <h2>Disability Rights Advocacy</h2>
+
+        <p>
+          My work bridges academic research and public engagement on disability
+          rights, accessibility, political inclusion, and representation.
+        </p>
+
+        <p>
+          I am committed to supporting broader conversations about disability,
+          citizenship, accessibility, and social justice while promoting more
+          inclusive approaches to research, data collection, and public policy.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+
+        <div class="contact-details">
+          <p>
+            Email:
+            <a href="mailto:angarjane1@berkeley.edu">
+              angarjane1 [at] berkeley [dot] edu
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        © 2026 Jane Mango Angar
+      </footer>
+
+    </div>
+  </main>
+
+</body>
+</html>
