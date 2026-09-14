@@ -3,13 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Jane Mango Angar</title>
-
-  <meta
-    name="description"
-    content="Jane Mango Angar is a Ph.D. candidate in Political Science at the University of California, Berkeley."
-  >
+  <meta name="description" content="Jane Mango Angar is a Ph.D. candidate in Political Science at the University of California, Berkeley.">
 
   <style>
     :root {
@@ -23,9 +18,7 @@
       --background: #ffffff;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     html {
       scroll-behavior: smooth;
@@ -47,13 +40,7 @@
     }
 
     a:hover,
-    a:focus {
-      color: var(--gold);
-    }
-
-    /* =========================
-       LEFT PROFILE COLUMN
-       ========================= */
+    a:focus { color: var(--gold); }
 
     .sidebar {
       position: fixed;
@@ -172,10 +159,6 @@
       color: var(--navy);
     }
 
-    /* =========================
-       MAIN CONTENT
-       ========================= */
-
     main {
       width: calc(100% - var(--sidebar-width));
       margin-left: var(--sidebar-width);
@@ -192,9 +175,7 @@
       border-bottom: 1px solid var(--line);
     }
 
-    section:last-of-type {
-      border-bottom: 0;
-    }
+    section:last-of-type { border-bottom: 0; }
 
     h2 {
       position: relative;
@@ -217,7 +198,7 @@
     }
 
     h3 {
-      margin: 5px 0 30px;
+      margin: 5px 0 28px;
       color: var(--navy);
       font-family: Arial, Helvetica, sans-serif;
       font-size: 1.02rem;
@@ -226,17 +207,8 @@
       text-transform: uppercase;
     }
 
-    p {
-      margin: 0 0 1.25em;
-    }
-
-    section p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* =========================
-       RESEARCH ENTRIES
-       ========================= */
+    p { margin: 0 0 1.25em; }
+    section p:last-child { margin-bottom: 0; }
 
     .research-item {
       margin-bottom: 32px;
@@ -272,9 +244,25 @@
       line-height: 1.55;
     }
 
-    /* =========================
-       CONTACT AND FOOTER
-       ========================= */
+    .teaching-group { margin-top: 38px; }
+    .teaching-role { margin-bottom: 20px; }
+    .course-list { border-top: 1px solid var(--line); }
+
+    .course-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 260px;
+      gap: 25px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .course-date {
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.86rem;
+      line-height: 1.6;
+      text-align: right;
+    }
 
     .contact-details {
       padding: 22px 25px;
@@ -290,16 +278,10 @@
       text-align: center;
     }
 
-    /* Keyboard accessibility */
-
     a:focus-visible {
       outline: 3px solid var(--gold);
       outline-offset: 4px;
     }
-
-    /* =========================
-       TABLET
-       ========================= */
 
     @media (max-width: 850px) {
       .sidebar {
@@ -316,9 +298,7 @@
         margin-bottom: 20px;
       }
 
-      .sidebar h1 {
-        font-size: 1.8rem;
-      }
+      .sidebar h1 { font-size: 1.8rem; }
 
       .sidebar nav {
         display: flex;
@@ -329,14 +309,10 @@
         padding: 18px 0;
       }
 
-      .sidebar nav a {
-        display: inline-block;
-      }
+      .sidebar nav a { display: inline-block; }
 
       .sidebar nav a:hover,
-      .sidebar nav a:focus {
-        transform: none;
-      }
+      .sidebar nav a:focus { transform: none; }
 
       main {
         width: 100%;
@@ -348,14 +324,17 @@
         padding-top: 35px;
       }
 
-      section {
-        padding: 15px 0 45px;
-      }
+      section { padding: 15px 0 45px; }
     }
 
-    /* =========================
-       MOBILE
-       ========================= */
+    @media (max-width: 650px) {
+      .course-item {
+        grid-template-columns: 1fr;
+        gap: 3px;
+      }
+
+      .course-date { text-align: left; }
+    }
 
     @media (max-width: 500px) {
       body {
@@ -363,25 +342,11 @@
         line-height: 1.68;
       }
 
-      .sidebar {
-        padding: 32px 20px 25px;
-      }
-
-      .sidebar nav {
-        gap: 4px 12px;
-      }
-
-      .sidebar nav a {
-        font-size: 0.75rem;
-      }
-
-      .content {
-        width: calc(100% - 34px);
-      }
-
-      h2 {
-        font-size: 1.55rem;
-      }
+      .sidebar { padding: 32px 20px 25px; }
+      .sidebar nav { gap: 4px 12px; }
+      .sidebar nav a { font-size: 0.75rem; }
+      .content { width: calc(100% - 34px); }
+      h2 { font-size: 1.55rem; }
 
       .research-item {
         margin-bottom: 26px;
@@ -392,21 +357,12 @@
 </head>
 
 <body>
-
   <aside class="sidebar">
-
-    <!--
-      PHOTO:
-      Upload your photograph to the repository as profile.jpg.
-    -->
     <div class="portrait">
       <img
         src="profile.jpg"
         alt="Portrait of Jane Mango Angar"
-        onerror="
-          this.style.display='none';
-          this.nextElementSibling.style.display='flex';
-        "
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
       >
       <div class="portrait-placeholder" aria-hidden="true">JA</div>
     </div>
@@ -415,9 +371,7 @@
 
     <p class="position">
       Ph.D. Candidate in Political Science
-      <span class="institution">
-        University of California, Berkeley
-      </span>
+      <span class="institution">University of California, Berkeley</span>
     </p>
 
     <nav aria-label="Main navigation">
@@ -429,228 +383,171 @@
     </nav>
 
     <div class="sidebar-links">
-
-      <!--
-        CV:
-        Upload your CV to the repository as Jane_Angar_CV.pdf.
-      -->
-      <a
-        href="Jane_Angar_CV.pdf"
-        target="_blank"
-        rel="noopener"
-      >
-        CV
-      </a>
-
-      <a href="mailto:angarjane1@berkeley.edu">
-        Email
-      </a>
-
+      <a href="Jane_Angar_CV.pdf" target="_blank" rel="noopener">CV</a>
+      <a href="mailto:angarjane1@berkeley.edu">Email</a>
     </div>
   </aside>
 
   <main>
     <div class="content">
-
-      <!-- =========================
-           ABOUT
-           ========================= -->
-
       <section id="about">
         <h2>About</h2>
 
         <p>
           I am a Ph.D. candidate in Political Science at the University of
           California, Berkeley, a Resident Research Associate at the
-          <a
-            href="https://cpd.berkeley.edu/people/research-associates/"
-            target="_blank"
-            rel="noopener"
-          >
-            Center on the Politics of Development
-          </a>,
+          <a href="https://cpd.berkeley.edu/people/research-associates/" target="_blank" rel="noopener">Center on the Politics of Development</a>,
           and a Senior Data Science Fellow at
-          <a
-            href="https://dlab.berkeley.edu/"
-            target="_blank"
-            rel="noopener"
-          >
-            D-Lab
-          </a>.
+          <a href="https://dlab.berkeley.edu/" target="_blank" rel="noopener">D-Lab</a>.
         </p>
 
         <p>
-          My research examines how socially isolated and politically
-          marginalized people develop collective identities, organize for
-          political action, and gain recognition from the state. Focusing
-          primarily on disability politics in Sub-Saharan Africa, I study how
-          disability movements emerge, how organizations negotiate
-          representation and build coalitions, and how movements persuade
-          states to recognize populations that public institutions have
-          historically failed to see.
+          My research examines how socially isolated and politically marginalized
+          people develop collective identities, organize for political action, and
+          gain recognition from the state. Focusing primarily on disability politics
+          in Sub-Saharan Africa, I study how disability movements emerge, how
+          organizations negotiate representation and build coalitions, and how
+          movements persuade states to recognize populations that public institutions
+          have historically failed to see.
         </p>
 
         <p>
-          My dissertation,
-          <em>
-            From Atomization to Recognition: The Political Development of
-            Disability Movements in Africa
-          </em>,
-          combines comparative historical analysis, archival research,
-          interviews, and quantitative methods to trace the development and
-          political consequences of disability organizing. More broadly, my
-          research interests include comparative politics, African politics,
-          social movements, political identity, state formation, and the
+          My dissertation, <em>From Atomization to Recognition: The Political
+          Development of Disability Movements in Africa</em>, combines comparative
+          historical analysis, archival research, interviews, and quantitative methods
+          to trace the development and political consequences of disability organizing.
+          More broadly, my research interests include comparative politics, African
+          politics, social movements, political identity, state formation, and the
           politics of inclusion and accessibility.
         </p>
 
         <p>
           Previously, I served as Lead Investigator for
-          <a
-            href="https://blac.berkeley.edu/"
-            target="_blank"
-            rel="noopener"
-          >
-            Black Lives at Cal
-          </a>,
-          where I led the initiative’s research team and supervised
-          undergraduate researchers studying the history and contemporary
-          experiences of Black communities at UC Berkeley.
+          <a href="https://blac.berkeley.edu/" target="_blank" rel="noopener">Black Lives at Cal</a>,
+          where I led the initiative’s research team and supervised undergraduate
+          researchers studying the history and contemporary experiences of Black
+          communities at UC Berkeley.
         </p>
       </section>
 
-      <!-- =========================
-           RESEARCH
-           ========================= -->
-
       <section id="research">
         <h2>Research</h2>
-
         <h3>Ongoing Research</h3>
 
         <article class="research-item">
-          <h4>
-            “Making Disability Count: Movements and the Politics of
-            Statistical Recognition”
-          </h4>
+          <h4>“Making Disability Count: Movements and the Politics of Statistical Recognition”</h4>
+          <p class="research-status">Job Market Paper · Under review at <em>World Politics</em></p>
+        </article>
 
+        <article class="research-item">
+          <h4>“Teaching Disability Politics: The Recognition–Implementation Gap in Global South Perspectives”</h4>
+          <p class="research-status">Under review at <em>PS: Political Science &amp; Politics</em></p>
+        </article>
+
+        <article class="research-item">
+          <h4>“Protest or Partnership? How Nigerian Women’s Organizations Navigate Repression”</h4>
+          <p class="research-authors">With Leonardo R. Arriola, Sarah Daniel, Matthew K. Gichohi, and Liv Tønnessen</p>
           <p class="research-status">
-            Job Market Paper · Under review at <em>World Politics</em>
+            In preparation for a special issue on <em>Rights Activism under Political
+            Uncertainty in Africa</em> in <em>Africa Spectrum</em>
           </p>
         </article>
 
         <article class="research-item">
-          <h4>
-            “Teaching Disability Politics: The Recognition–Implementation
-            Gap in Global South Perspectives”
-          </h4>
-
-          <p class="research-status">
-            Under review at
-            <em>PS: Political Science &amp; Politics</em>
-          </p>
-        </article>
-
-        <article class="research-item">
-          <h4>
-            “Protest or Partnership? How Nigerian Women’s Organizations
-            Navigate Repression”
-          </h4>
-
-          <p class="research-authors">
-            With Leonardo R. Arriola, Sarah Daniel, Matthew K. Gichohi,
-            and Liv Tønnessen
-          </p>
-
-          <p class="research-status">
-            In preparation for a special issue on
-            <em>
-              Rights Activism under Political Uncertainty in Africa
-            </em>
-            in <em>Africa Spectrum</em>
-          </p>
-        </article>
-
-        <article class="research-item">
-          <h4>
-            “Accessibility and the Electoral Process for Persons with
-            Disabilities in Kenya”
-          </h4>
-           <p class="research-status">
-            Working papers
-          </p>
+          <h4>“Accessibility and the Electoral Process for Persons with Disabilities in Kenya”</h4>
+          <p class="research-status">Working paper</p>
         </article>
       </section>
-
-      <!-- =========================
-           TEACHING
-           ========================= -->
 
       <section id="teaching">
         <h2>Teaching &amp; Methods Training</h2>
 
         <p>
-          I have taught and supported courses in quantitative methods,
-          comparative politics, African politics, and research design at the
-          University of California, Berkeley.
+          I value accessibility in teaching and learning and strive to create courses
+          in which students with different backgrounds, experiences, and learning needs
+          can participate fully. In Summer 2026, I completed <em>Preparing Future
+          Faculty: Developing Courses through the Lens of Universal Design for
+          Learning</em>, offered by UC Berkeley’s GSI Teaching &amp; Resource Center,
+          and earned a Certificate in Universal Design for Learning.
         </p>
 
-        <p>
-          I have also worked with Berkeley’s Data Science and Social Sciences
-          research community as both an instructor and consultant, supporting
-          students and researchers in areas such as data analysis,
-          computational social science, and research methodology.
-        </p>
+        <div class="teaching-group">
+          <h3>University Teaching</h3>
 
-        <p>
-          I am committed to making computational social science and academic
-          research more accessible to diverse student communities.
-        </p>
+          <p class="teaching-role">
+            <strong>Graduate Student Instructor</strong><br>
+            University of California, Berkeley
+          </p>
+
+          <div class="course-list">
+            <div class="course-item">
+              <span>Introduction to Empirical Analysis and Quantitative Methods</span>
+              <span class="course-date">Spring 2026; Fall 2025; Summer 2024; Summer 2023</span>
+            </div>
+
+            <div class="course-item">
+              <span>Chinese Foreign Policy</span>
+              <span class="course-date">Summer 2025</span>
+            </div>
+
+            <div class="course-item">
+              <span>African Politics</span>
+              <span class="course-date">Fall 2023</span>
+            </div>
+
+            <div class="course-item">
+              <span>Projecting Power</span>
+              <span class="course-date">Spring 2023</span>
+            </div>
+
+            <div class="course-item">
+              <span>Eastern European Politics</span>
+              <span class="course-date">Fall 2022</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="teaching-group">
+          <h3>Methods Instruction</h3>
+
+          <p>
+            From Fall 2023 through Spring 2026, I provided methods instruction through
+            UC Berkeley’s
+            <a href="https://dlab.berkeley.edu/" target="_blank" rel="noopener">D-Lab</a>.
+            I taught workshops on the institutional review board (IRB) process, MAXQDA,
+            Qualtrics, and Excel, and assisted with workshops introducing researchers
+            to data analysis in R.
+          </p>
+        </div>
       </section>
-
-      <!-- =========================
-           ADVOCACY
-           ========================= -->
 
       <section id="advocacy">
         <h2>Disability Rights Advocacy</h2>
 
         <p>
-          My work bridges academic research and public engagement on
-          disability rights, accessibility, political inclusion, and
-          representation.
+          My work bridges academic research and public engagement on disability rights,
+          accessibility, political inclusion, and representation.
         </p>
 
         <p>
           I am committed to supporting broader conversations about disability,
-          citizenship, accessibility, and social justice while promoting more
-          inclusive approaches to research, data collection, and public policy.
+          citizenship, accessibility, and social justice while promoting more inclusive
+          approaches to research, data collection, and public policy.
         </p>
       </section>
 
-      <!-- =========================
-           CONTACT
-           ========================= -->
-
       <section id="contact">
         <h2>Contact</h2>
-
         <div class="contact-details">
           <p>
             Email:
-            <a href="mailto:angarjane1@berkeley.edu">
-              angarjane1 [at] berkeley [dot] edu
-            </a>
+            <a href="mailto:angarjane1@berkeley.edu">angarjane1 [at] berkeley [dot] edu</a>
           </p>
         </div>
       </section>
 
-      <footer>
-        © 2026 Jane Mango Angar
-      </footer>
-
+      <footer>© 2026 Jane Mango Angar</footer>
     </div>
   </main>
-
 </body>
 </html>
