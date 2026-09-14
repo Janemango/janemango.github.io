@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Jane Mango Angar is a PhD candidate in Political Science at the University of California, Berkeley."
+    content="Jane Mango Angar is a Ph.D. candidate in Political Science at the University of California, Berkeley."
   >
 
   <style>
@@ -216,6 +216,16 @@
       content: "";
     }
 
+    h3 {
+      margin: 5px 0 30px;
+      color: var(--navy);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.02rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
     p {
       margin: 0 0 1.25em;
     }
@@ -223,6 +233,48 @@
     section p:last-child {
       margin-bottom: 0;
     }
+
+    /* =========================
+       RESEARCH ENTRIES
+       ========================= */
+
+    .research-item {
+      margin-bottom: 32px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .research-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .research-item h4 {
+      margin: 0 0 8px;
+      color: var(--text);
+      font-size: 1.08rem;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    .research-authors {
+      margin: 0 0 5px;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .research-status {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.87rem;
+      line-height: 1.55;
+    }
+
+    /* =========================
+       CONTACT AND FOOTER
+       ========================= */
 
     .contact-details {
       padding: 22px 25px;
@@ -246,7 +298,7 @@
     }
 
     /* =========================
-       TABLET AND MOBILE
+       TABLET
        ========================= */
 
     @media (max-width: 850px) {
@@ -301,6 +353,10 @@
       }
     }
 
+    /* =========================
+       MOBILE
+       ========================= */
+
     @media (max-width: 500px) {
       body {
         font-size: 16px;
@@ -326,6 +382,11 @@
       h2 {
         font-size: 1.55rem;
       }
+
+      .research-item {
+        margin-bottom: 26px;
+        padding-bottom: 23px;
+      }
     }
   </style>
 </head>
@@ -335,9 +396,8 @@
   <aside class="sidebar">
 
     <!--
-      PHOTO PLACEHOLDER:
-      Upload your photograph to the repository and name it profile.jpg.
-      It will appear automatically.
+      PHOTO:
+      Upload your photograph to the repository as profile.jpg.
     -->
     <div class="portrait">
       <img
@@ -354,7 +414,7 @@
     <h1>Jane Mango Angar</h1>
 
     <p class="position">
-      PhD Candidate in Political Science
+      Ph.D. Candidate in Political Science
       <span class="institution">
         University of California, Berkeley
       </span>
@@ -371,10 +431,14 @@
     <div class="sidebar-links">
 
       <!--
-        CV PLACEHOLDER:
-        Upload your CV and name it Jane_Angar_CV.pdf.
+        CV:
+        Upload your CV to the repository as Jane_Angar_CV.pdf.
       -->
-      <a href="Jane_Angar_CV.pdf" target="_blank" rel="noopener">
+      <a
+        href="Jane_Angar_CV.pdf"
+        target="_blank"
+        rel="noopener"
+      >
         CV
       </a>
 
@@ -382,90 +446,142 @@
         Email
       </a>
 
-      <!-- Add Google Scholar, GitHub, or LinkedIn links here later. -->
-
     </div>
   </aside>
 
   <main>
     <div class="content">
 
-  <section id="about">
-  <h2>About</h2>
+      <!-- =========================
+           ABOUT
+           ========================= -->
 
-  <p>
-    I am a Ph.D. candidate in Political Science at the University of
-    California, Berkeley, a Resident Research Associate at the
-    <a href="https://cpd.berkeley.edu/people/research-associates/"
-       target="_blank"
-       rel="noopener">
-      Center on the Politics of Development
-    </a>,
-    and a Senior Data Science Fellow at
-    <a href="https://dlab.berkeley.edu/"
-       target="_blank"
-       rel="noopener">
-      D-Lab
-    </a>.
-  </p>
+      <section id="about">
+        <h2>About</h2>
 
-  <p>
-    My research examines how socially isolated and politically marginalized
-    people develop collective identities, organize for political action, and
-    gain recognition from the state. Focusing primarily on disability politics
-    in Sub-Saharan Africa, I study how disability movements emerge, how
-    organizations negotiate representation and build coalitions, and how
-    movements persuade states to recognize populations that public institutions
-    have historically failed to see.
-  </p>
+        <p>
+          I am a Ph.D. candidate in Political Science at the University of
+          California, Berkeley, a Resident Research Associate at the
+          <a
+            href="https://cpd.berkeley.edu/people/research-associates/"
+            target="_blank"
+            rel="noopener"
+          >
+            Center on the Politics of Development
+          </a>,
+          and a Senior Data Science Fellow at
+          <a
+            href="https://dlab.berkeley.edu/"
+            target="_blank"
+            rel="noopener"
+          >
+            D-Lab
+          </a>.
+        </p>
 
-  <p>
-    My dissertation,
-    <em>From Atomization to Recognition: The Political Development of
-    Disability Movements in Africa</em>, combines comparative historical
-    analysis, archival research, interviews, and quantitative methods to trace
-    the development and political consequences of disability organizing.
-    More broadly, my research interests include comparative politics, African
-    politics, social movements, political identity, state formation, and the
-    politics of inclusion and accessibility.
-  </p>
+        <p>
+          My research examines how socially isolated and politically
+          marginalized people develop collective identities, organize for
+          political action, and gain recognition from the state. Focusing
+          primarily on disability politics in Sub-Saharan Africa, I study how
+          disability movements emerge, how organizations negotiate
+          representation and build coalitions, and how movements persuade
+          states to recognize populations that public institutions have
+          historically failed to see.
+        </p>
 
-  <p>
-    Previously, I served as Lead Investigator for
-    <a href="https://blac.berkeley.edu/"
-       target="_blank"
-       rel="noopener">
-      Black Lives at Cal
-    </a>,
-    where I led the initiative’s research team and supervised undergraduate
-    researchers studying the history and contemporary experiences of Black
-    communities at UC Berkeley.
-  </p>
-</section>
+        <p>
+          My dissertation,
+          <em>
+            From Atomization to Recognition: The Political Development of
+            Disability Movements in Africa
+          </em>,
+          combines comparative historical analysis, archival research,
+          interviews, and quantitative methods to trace the development and
+          political consequences of disability organizing. More broadly, my
+          research interests include comparative politics, African politics,
+          social movements, political identity, state formation, and the
+          politics of inclusion and accessibility.
+        </p>
+
+        <p>
+          Previously, I served as Lead Investigator for
+          <a
+            href="https://blac.berkeley.edu/"
+            target="_blank"
+            rel="noopener"
+          >
+            Black Lives at Cal
+          </a>,
+          where I led the initiative’s research team and supervised
+          undergraduate researchers studying the history and contemporary
+          experiences of Black communities at UC Berkeley.
+        </p>
+      </section>
+
+      <!-- =========================
+           RESEARCH
+           ========================= -->
 
       <section id="research">
         <h2>Research</h2>
 
-        <p>
-          My dissertation examines the emergence and effectiveness of disability
-          rights movements in Africa, with a focus on how disabled persons
-          organizations have shaped state recognition through national censuses,
-          rights legislation, and social protection systems.
-        </p>
+        <h3>Ongoing Research</h3>
 
-        <p>
-          The project combines qualitative and quantitative methods, including
-          archival research, interviews, social network analysis, and
-          event-history analysis to examine variation in disability recognition
-          across African countries.
-        </p>
+        <article class="research-item">
+          <h4>
+            “Making Disability Count: Movements and the Politics of
+            Statistical Recognition”
+          </h4>
 
-        <p>
-          My broader research interests include disability politics, African
-          politics, political representation, state legibility, social movements,
-          and comparative political development.
-        </p>
+          <p class="research-status">
+            Job Market Paper · Under review at <em>World Politics</em>
+          </p>
+        </article>
+
+        <article class="research-item">
+          <h4>
+            “Teaching Disability Politics: The Recognition–Implementation
+            Gap in Global South Perspectives”
+          </h4>
+
+          <p class="research-status">
+            Under review at
+            <em>PS: Political Science &amp; Politics</em>
+          </p>
+        </article>
+
+        <article class="research-item">
+          <h4>
+            “Protest or Partnership? How Nigerian Women’s Organizations
+            Navigate Repression”
+          </h4>
+
+          <p class="research-authors">
+            With Leonardo R. Arriola, Sarah Daniel, Matthew K. Gichohi,
+            and Liv Tønnessen
+          </p>
+
+          <p class="research-status">
+            In preparation for a special issue on
+            <em>
+              Rights Activism under Political Uncertainty in Africa
+            </em>
+            in <em>Africa Spectrum</em>
+          </p>
+        </article>
+
+        <article class="research-item">
+          <h4>
+            “Accessibility and the Electoral Process for Persons with
+            Disabilities in Kenya”
+          </h4>
+        </article>
       </section>
+
+      <!-- =========================
+           TEACHING
+           ========================= -->
 
       <section id="teaching">
         <h2>Teaching &amp; Methods Training</h2>
@@ -479,8 +595,8 @@
         <p>
           I have also worked with Berkeley’s Data Science and Social Sciences
           research community as both an instructor and consultant, supporting
-          students and researchers in areas such as data analysis, computational
-          social science, and research methodology.
+          students and researchers in areas such as data analysis,
+          computational social science, and research methodology.
         </p>
 
         <p>
@@ -489,12 +605,17 @@
         </p>
       </section>
 
+      <!-- =========================
+           ADVOCACY
+           ========================= -->
+
       <section id="advocacy">
         <h2>Disability Rights Advocacy</h2>
 
         <p>
-          My work bridges academic research and public engagement on disability
-          rights, accessibility, political inclusion, and representation.
+          My work bridges academic research and public engagement on
+          disability rights, accessibility, political inclusion, and
+          representation.
         </p>
 
         <p>
@@ -503,6 +624,10 @@
           inclusive approaches to research, data collection, and public policy.
         </p>
       </section>
+
+      <!-- =========================
+           CONTACT
+           ========================= -->
 
       <section id="contact">
         <h2>Contact</h2>
